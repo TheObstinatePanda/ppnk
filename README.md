@@ -51,6 +51,49 @@ If built correctly, the contact information for the fosters/applicants could sta
 
 Work with Tanya and other fosters that work with PPNK to get their input and wishes for the site. Gather ideas.
 
+## Foster Feed Back
+
+**Jessica**: 
+- The current process works, nothing is outright broken
+  - Allow at least 4 photos
+  - Drop downs are fine
+  - Inputting should remain the same
+  - Should add an adoption fee either field or default amount
+- Site does need an update
+  - Back up information on animals on things such as sexually mature (over 4 months of age), pregnant, not enough homes, irrisponsible owners, AG report that totals the number of animals euthanized for space alone.
+  - A bio for the founder/owner and for the business as well as a brief history.
+- Don't completely change if not for the better.
+
+**Andrea**:
+- Asking for more updated profiles/pictures for the people at Paradox
+- Also for the paradox site, posting blackout dates for when they are unable to take ferals
+- Provided examples of other successful rescues in Georgia:
+  - [Angels Rescue](https://angelsrescue.org/)
+  - [Fur Kids](https://furkids.org)
+  - [Paws Atlanta](https://www.pawsatlanta.org)
+- Add something that can show the number of animals helped
+- Set up recurring donations
+- Add features to promote fundraising and help special cases/expenses
+- Link all social media to the webpage to get more traffic to those sites
+- Every post on social media should include a website link
+- Make sure application process works on mobile devices
+- Application process should me more prominent on the main page
+  - Links directly from an animal's posting to apply and a drop down
+  - Have the option for applicants to detail what they want if they don't see a specific animal they want to choose
+- Make sure the notification to the foster caring for the animal when an application comes in for that animal
+- If user is renting, have fields that are required to post land lords information
+- If user has pets, they must include vet info
+- A question, specifically for cats, could be `Have you ever had a cat declawed? If so, why?`
+- Track information on why someone has been denied and flag that information if the user tries to choose different fosters
+
+
+**Nancy**:
+- Overall, the current site is easy to use and follow.
+- Could remove the area to list a second breed for animals
+- Would like multiple ways of sorting
+  - Alphabetically
+  - By litter
+
 ## Design User Experience
 
 Before beginning on full development, decisions should be made regarding the design of the site. What fonts will be included, what default font size will be used, what colors (hex codes preferred) will be included in the site, how will the layout be configured, etc.
@@ -62,9 +105,14 @@ Past the visual distinctions, decisions need to be made for how a user will navi
 The following modules are currently planned for development:
 
 - REACT for handling front-end application rendering/interactivity
+- REACT-DOM to assist with rendering React components into the DOM.
+- Redux to help ensure the application state is easy to test
 - Express for handling API requests
+- dotenv to pull global variables from the .env file during testing
 - MySQL for database interactions
+- Sequelize and MySQL2 for interactions with the MySQL database
 - Multer for handling file uploads (images)
+- Sharp for handling with image compression for easier storage
 
 ## Begin Development
 

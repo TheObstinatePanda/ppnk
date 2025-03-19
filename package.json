@@ -1,0 +1,31 @@
+{
+  "name": "ppnk",
+  "version": "1.0.0",
+  "description": "- [Decide on Database Structure](#decide-on-database-structure)\r - [Gather Functionality Requirements](#gather-functionality-requirements)\r   - [Database Functionality](#database-functionality)\r   - [Build Functionality](#build-functionality)\r - [Gather Stakeholder Input (fosters/other organizations)](#gather-stakeholder-input-fostersother-organizations)\r - [Design User Experience](#design-user-experience)\r - [Decide on Development Modules/Technology](#decide-on-development-modulestechnology)\r - [Begin Development](#begin-development)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheObstinatePanda/ppnk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheObstinatePanda/ppnk/issues"
+  },
+  "homepage": "https://github.com/TheObstinatePanda/ppnk#readme",
+  "dependencies": {
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.13.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "redux": "^5.0.1",
+    "sequelize": "^6.37.6"
+  }
+}
