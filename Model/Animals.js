@@ -64,3 +64,5 @@ const Animals = sequelize.define('Animals', {
         allowNull: false
     }
 });
+
+module.exports = Animals;
