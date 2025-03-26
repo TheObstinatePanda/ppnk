@@ -233,6 +233,30 @@ const Applicants = sequelize.define('Applicants', {
             },
         },
     },
+    is_restricted: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+    },
+    restricted_reason: {
+        type: DataTypes.TEXT,
+        allowNull: true,
+        validate: {
+            isValidRestrictedReason(value) {
+                validateDependentField(
+                    this.is_restricted,
+                    true,
+                    value,
+                    'Restricted reason is required if you are marking a user as restricted.'
+                );
+                validateDependentField(
+                    this.is_restricted,
+                    false,
+                    value,
+                    'Restricted reason is not required if user is not restricted.'
+                )
+            },
+        },
+    }
 });
 
 module.exports = Applicants;
