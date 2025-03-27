@@ -113,6 +113,8 @@ The following modules are currently planned for development:
 - Sequelize and MySQL2 for interactions with the MySQL database
 - Multer for handling file uploads (images)
 - Sharp for handling with image compression for easier storage
+- bcrypt for hashing passwords for security purposes
+- jsonwebtoken (JWT) for generating json web tokens to authenticate user logins
 
 ## Begin Development
 
