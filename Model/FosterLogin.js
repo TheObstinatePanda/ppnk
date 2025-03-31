@@ -34,7 +34,15 @@ const FosterLogin = sequelize.define('FosterLogin', {
     is_active: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
-    }
+    },
+    reset_token: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    reset_token_expires: {
+        type: DataTypes.DATE,
+        allowNull: true
+    },
 });
 
 module.exports = FosterLogin;
