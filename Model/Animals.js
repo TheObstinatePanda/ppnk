@@ -62,6 +62,10 @@ const Animals = sequelize.define('Animals', {
     is_adopted: {
         type: DataTypes.BOOLEAN,
         allowNull: false
+    },
+    images: {
+        type: DataTypes.TEXT
+        allowNull: false
     }
 });
 

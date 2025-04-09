@@ -202,8 +202,13 @@ router.get('/get', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const user = await FosterLogin.destroy({ where: { id: req.params.id } });
-        res.status(200).json(user);
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        res.status(200).json({ message: 'User deleted succesfully' });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
 });
+
+module.exports = router;
