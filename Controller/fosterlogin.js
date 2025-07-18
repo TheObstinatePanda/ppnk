@@ -82,6 +82,27 @@ router.post('/login', async (req, res) => {
     }
 })
 
+// Get current user
+router.get('/current-user', async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(' ')[1];
+        if (!token) {
+            return res.status(401).json({ error: 'Unauthorized: no token' });
+        }
+
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await FosterLogin.findOne({ where: { id: decoded.id }, attributes: { excluded: ['password'] } });
+
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        res.status(200).json(user);
+    } catch (error) {
+        return res.status(404).json({ error: 'User not found' });
+    }
+});
+
 // Update a user in foster login
 router.put('/update/:id', userValidationRules, async (req, res) => {
     const errors = validationResult(req);

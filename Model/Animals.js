@@ -39,7 +39,11 @@ const Animals = sequelize.define('Animals', {
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    good_w_animals: {
+    good_w_dogs: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    },
+    good_w_cats: {
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
@@ -64,7 +68,7 @@ const Animals = sequelize.define('Animals', {
         allowNull: false
     },
     images: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
         allowNull: false
     }
 });
